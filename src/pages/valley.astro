@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+<Layout title='The Internet'>
+  <div id="hd">
+            <div id="menu">
+                <div id="tit">
+                   <h3>THE VALLEY OF</h3>
+                   <h1>CODE</h1>
+                </div>
+                <p>The Internet</p>
+                <ol>
+                    <li><a href='#'>	▶︎ Introduction</a></li>
+                    <li><a href='http://localhost:4321/url'>	What is a URL</a></li>
+                    <li><a href='http://localhost:4321/port'>	What is a port</a></li>
+                    <li><a href='#'>	The DNS protocol</a></li>
+                    <li><a href='#'>	The TCP protocol</a></li>
+                    <li><a href='#'>	The UDP protocol</a></li>
+                </ol>
+                <a id="bck" href='#'>[← back to the Valley]</a>
+            </div>
+            <div id="cont">
+                <h1><b>The Internet</b></h1>
+                <p id="ph">The basics of computer networks and protocols, introducing URLs, DNS, TCP, and UDP</p>
+                <p> You and I have computers, smartphones, tablets, smart TVs, and even smartwatches. </p>
+                <p> These are devices that can work on their own and do something. When you connect them to the internet, via a 5G/4G connection, a Wi-Fi network, or by plugging in an Ethernet cable, you have access to the outside world.</p>
+                <p> Under the hood, when your device is connected to the internet, it’s assigned an IP address.</p>
+                <p> This is composed of 4 sets of numbers, from 0 to 255. You can find this number in the network settings of your device.</p>
+                <p> For example, the IP address of my MacBook now is <span class="blk_bg">192.168.1.105. </span> Addresses that start with <span class="blk_bg">192.168. </span> are reserved for local networks. That’s your local network.</p>
+                <p> The local network is created by your Wi-Fi/Ethernet router. The router is the device that’s connected to the internet provider.</p>
+                <p> This is what happens: the router connects to the internet provider and gets its own IP address.</p>
+                <p> Then the router creates the local network and assigns every device that connects to it a different local IP address. So every device in your house has a different IP address.</p>
+                <p> You can communicate between devices on your local network, but you cannot communicate with devices in other local networks, for example, the ones in your friend’s house, unless things are set up for this.</p>
+                <p> This is because there is a level of protection. In a local network, the IP address is private.</p>
+                <p> Our devices can talk to the internet when they want, but the internet can’t talk to your devices unless you want it to and set up systems to do so (and this is by design, so you don’t have to spend the evening fighting hackers trying to set the room temperature of your smart thermostat, or worse).</p>
+                <p> So, we can tell our devices to talk to something on the internet. Cool. But… who do we talk to?</p>
+                <p> The answer is other computers. Servers, to give them a proper name.</p>
+                <p> A server is a computer whose job is to serve us something.</p>
+                <p> A server has an IP address, too.</p>
+                <p> This time, the IP address is public because the server is created to be reached, unlike our home devices. The server has to be reachable all the time.</p>
+                <p> A server also has a name, which we call a domain name.</p>
+                <p> Other computers, called DNS servers, have the job of mapping a domain name to an IP address. So instead of saying “visit 142.250.184.78 ” we say “visit google.com”.</p>
+                <p> Humans work best with names, computers work best with numbers. DNS makes it all very easy for both.</p>
+                <p> You don’t usually try to reach for a website using its IP address. You can, but it’s very rare.</p>
+                <p> You usually use a domain name. Like google.com, or thevalleyofcode.com.</p>
+                <p> This is very handy because for example I can change the server location and company I use to host a website, while maintaining the same domain name.</p>
+                <p> The system that maps domain names to IP addresses is called DNS: Domain Name System.</p>
+                <p> The language that computers use to talk to each other is called a protocol. The protocol that powers the internet we all know is called Internet Protocol Suite, also known as TCP/IP.</p>
+                <p> The IP protocol part is what I mentioned above; IP addresses and so on. That’s the base layer that identifies how computers can find each other.</p>
+                <p> On top of that layer, we have what we call transport protocols. They define how computers send packets of data to each other.</p>
+                <p> TCP, also known as Transmission Control Protocol, is one of them. This protocol makes sure packets are delivered from the client to the server, and from the server to the client.</p>
+                <p> We also have the UDP protocol, which is similar but different, we’ll see more about this later</p>
+                <p> I think we have the basics in place: devices, IP addresses, and the TCP/IP protocol that makes sure data can flow between computers.</p>
+            </div>
+        </div>
+</Layout>
+<style>
+
+#hd{
+    width:100%;
+    display: inline-flex;
+    background-color: aliceblue;
+    margin:0%;
+    font-family: 'Roboto Mono';
+}
+
+#menu{
+    width: 30%;
+    display:block;
+    padding:30px;
+    text-align: left;
+}
+#tit{
+  margin:0px 50px ;
+  width:70%;
+  text-align:center;
+}
+#tit h3{
+  margin-bottom:0px;
+  padding-bottom:0px;
+
+}
+#tit h1{
+  margin-top:0px;
+  padding-top:0px;
+  font-size:75px;
+  line-height:75px;
+  margin-bottom:0px;
+  padding-bottom:0px;
+}
+#menu p{
+    margin:15px 50px ;
+    width:70%;
+    text-align:center;
+    font-size:25px;
+    border-top: 10px solid rgb(252, 231, 1);
+    padding-top:5px;
+    border-bottom: 5px solid rgb(252, 231, 1);
+}
+#menu ol{
+  font-size:15px;
+  margin:45px 40px ;
+  width:70%;
+
+}
+#menu a{
+  font-size:15px;
+  color:rgb(8, 179, 253); 
+}
+#menu a #bck{
+  font-size:3px;
+  margin:45px 60px ;
+  width:70%;
+
+}
+#cont{
+    width:66%;
+    display:block;   
+    text-align: left;
+    margin:2%;
+}
+#cont p{
+  font-size:15px;
+  line-height: 25px;
+}
+#ph{
+  line-height: 17px;
+  color: rgb(96, 104, 112);
+}
+
+ol li{
+    counter-reset: list-number -1;
+}
+.blk_bg{
+     padding:1px 3px;
+     color:rgb(255, 255, 255);
+     background-color: rgb(0, 0, 0);
+}
+</style>
