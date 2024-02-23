@@ -1,5 +1,23 @@
 ---
-const test = 'hello'
+interface Props {
+	title: string;
+    desc: string;
+
+}
+
+const {title,desc} = Astro.props;
 ---
 
-<p>{test}</p>
+<style>
+	
+html {
+		font-family: Roboto Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;	
+	}
+
+
+	
+</style>
+<div >
+    <h1 class="h">{title}</h1>
+<p class="description">{desc}</p>
+</div>
